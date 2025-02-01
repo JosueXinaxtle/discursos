@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Visita</title>
+    <link rel="stylesheet" href="../css/alta.css">
+    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Programa de Discursos Congregación Santa Elena</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Josué Xinaxtle</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="salida.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Salidas
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="discursante.html">Agregar</a></li>
+                <li><a class="dropdown-item" href="discursante.html">Mostrar</a></li>
+                <li><a class="dropdown-item" href="discursante.html">Recientes</a></li>
+                <li><a class="dropdown-item" href="#">Elegir año</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Informe</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="salida.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Visitas
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="visita.html">Agregar</a></li>
+                <li><a class="dropdown-item" href="mostrar_visita.html">Mostrar</a></li>
+                <li><a class="dropdown-item" href="discursante.html">Recientes</a></li>
+                <li><a class="dropdown-item" href="#">Historial</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Informe</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="salida.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Discursos
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="discursante.html">Agregar</a></li>
+                <li><a class="dropdown-item" href="#">Mostrar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Informe</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="salida.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Congregación
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="congre_alta.html">Agregar</a></li>
+                <li><a class="dropdown-item" href="mostrar_congre.html">Mostrar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Informe</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="salida.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Discursante
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="discursante.html">Agregar</a></li>
+                <li><a class="dropdown-item" href="#">Mostrar</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Informe</a></li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="discursos_alta.html">Pendiente</a>
+            </li>
+           
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="salida.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Reportes
+              </a>
+              <ul class="dropdown-menu dropdown-menu-dark">
+                <li><a class="dropdown-item" href="discursante.html">Discursante</a></li>
+                <li><a class="dropdown-item" href="#">Datos adicionales</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="#">Informe</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="d-flex mt-3" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+      <div class="titulo">    
+        <h2>Agregar Visitante</h2> 
+      </div>    
+      <div class="form-alumnos">  
+      <form class="row g-3 needs-validation" action="../controlador/alumnosalta.php" method="post" novalidate>
+        <div class="col-md-4">
+          <label for="validationCustom01" class="form-label">Nombre:</label>
+          <input type="text" name="nom" class="form-control" id="validationCustom01"  required>
+          <div class="valid-feedback">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustom02" class="form-label">Apellido 1</label>
+          <input type="text" name="ape1" class="form-control" id="validationCustom02"  required>
+          <div class="valid-feedback">
+          </div>
+        </div>
+        <div class="col-md-4">
+          <label for="validationCustomUsername" class="form-label">Apellido 2</label>
+          <div class="input-group has-validation">
+           <input type="text" name="ape2" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+            <div class="invalid-feedback">           
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="validationCustom04" class="form-label">Tema:  </label>
+          <select class="form-select" name="tem" id="validationCustom04" required>
+            <option selected disabled value="">Elegir...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+          </div>
+        </div>
+        <div class="col-12">
+          <label for="validationCustom04" class="form-label">Canción</label>
+          <select class="form-select" name="can" id="validationCustom04" required>
+            <option selected disabled value="">Elegir...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+          </div>
+          <div class="col-12">
+            <label for="validationCustom04" class="form-label">Congregación</label>
+            <select class="form-select" name="cong" id="validationCustom04" required>
+              <option selected disabled value="">Elegir...</option>
+              <option>...</option>
+            </select>
+            <div class="invalid-feedback">
+            </div>
+
+        <div class="col-sm-6">
+          <label for="validationCustom03" class="form-label">Fecha:</label>
+          <input type="datetime-local" name="fec" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+          </div>
+        </div>
+        
+        <div class="col-md-6">
+          <label for="validationCustom03" class="form-label">Día:</label>
+          <input type="text" name="dia" class="form-control" id="validationCustom03" required>
+          <div class="invalid-feedback">
+          </div>
+        </div>
+        </div>
+        <div class="col-12">
+          <label for="validationCustom04" class="form-label">Contacto</label>
+          <select class="form-select" name="cont" id="validationCustom04" required>
+            <option selected disabled value="">Elegir...</option>
+            <option>...</option>
+          </select>
+          <div class="invalid-feedback">
+          </div> 
+        </div>
+        <div class="col-md-6">
+          <label for="validationCustom02" class="form-label">Teléfono:</label>
+          <input type="text" name="tel" class="form-control" id="validationCustom02"  required>
+          <div class="valid-feedback">
+          </div>
+        </div>
+        <br>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Guardar</button>
+        </div>
+      </form>   
+           </div>
+
+  <script src="../bootstrap/js/bootstrap.bundle.js"></script>
+  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+</body>
+</html> 

@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    background-color: rgb(194, 194, 231);
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+header{
+    display: flex;
+    background-color: #286bcf;
+    justify-content: space-between;
+    align-items: center ;
+    padding: 10px;
+    
+}
+.logo{
+    display: flex;
+    height: 70px;
+    border-radius: 50px;
+    margin-right: 10px;
+    align-items: center;
+    
+}
+header a{
+    color: azure;
+    text-decoration: none;
+    align-items: center;
+}
+.pie{
+    position: absolute;
+    width: 100%;
+    background-color: #286bcf;
+    
+}
+footer ul{
+    text-decoration: none;
+}
